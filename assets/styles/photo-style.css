@@ -1,0 +1,77 @@
+/* Photo Ninja */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Smooth scrolling when using Materialize ScrollSpy, though this applies to all scrolling. ScrollSpy 'throttle' is set to 10 too. */
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    content: '';
+    background: url("/assets/images/man.jpg");
+    /* --- Broke out the background: elements to test/ensure they worked as planned. Also adds clarity. Added support for different browsers. --- */
+    background-size: cover;
+    background-position: center;
+    min-height: 1000px;
+}
+
+nav>div>a {
+    margin-top: 3px;
+}
+
+.sidenav {
+    width: fit-content;
+}
+
+.section {
+    padding-top: 4vw;
+    padding-bottom: 4vw;
+}
+
+.tabs .indicator {
+    background-color: rgb(26, 35, 126);
+}
+
+.tabs .tab a:focus,
+.tabs .tab a:focus.active {
+    background: transparent;
+}
+
+/* Date Display */
+.datepicker-date-display {
+    background-color: rgb(26, 35, 126);
+}
+
+.datepicker-day-button:focus {
+    color: white !important;
+    background-color: rgb(26, 35, 126);
+}
+
+.datepicker-done,
+.datepicker-cancel,
+.select-dropdown li>span,
+.is-today {
+    color: rgb(26, 35, 126) !important
+}
+
+td.is-selected,
+.month-prev:active,
+.month-prev:focus,
+.month-next:active,
+.month-next:focus {
+    background-color: rgb(26, 35, 126) !important
+}
+
+td.is-selected.is-today {
+    color: rgb(255, 255, 255) !important
+}
+
+@media screen and (max-width: 670px) {
+    header {
+        min-height: 500px;
+    }
+}

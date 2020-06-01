@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" type="text/css" href="/assets/styles/materialize.css">
+    <link rel="stylesheet" type="text/css" href="/assets/styles/style.css">
+    <title>Materialize - to see whether it is sensible to use it for this project.</title>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-wrapper pink lighten-5">
+            <div class="container">
+                <a href="#" class="brand-logo"><img src="/assets/images/GaffCo - Background.png" height="55"></a>
+                <a href="#" class="sidenav-trigger" data-target="mobile-links"><i class="material-icons">menu</i></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="" class="btn-floating z-depth-0 indigo darken-4">
+                            <i class="material-icons">notifications</i>
+                        </a></li>
+                    <li><span class="badge white-text new pink">5</span></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Nav for Mobile devices using the Hamburger-menu must be defined outside of <nav></nav> to work. -->
+    <ul class="sidenav" id="mobile-links">
+        <li><a href="">Home</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">Contact</a></li>
+    </ul>
+    <header>
+        <div class="container">
+            <h1>Materialize Walkthrough by Shaun Pelling, aka the "Net Ninja"</h1>
+        </div>
+    </header>
+    <section>
+        <aside>
+            <div class="container">
+                <h1>Materialize</h1>
+                <p class="flow-text">Flow-text for the introduction to paragraphs. Since I'm testing some cool CSS
+                    pseudo-elements I require a little more text. Hopefully this is more than enough text to see what
+                    happens.</p>
+                <p>Additional text with a larger first paragraph letter. All other letters should remain default.</p>
+                <h4 class="hide">Hide me on all screen sizes</h4>
+                <h4 class="hide-on-small-only">Hide me on small screen sizes</h4>
+                <h4 class="hide-on-med-only">Hide me on medium screen sizes</h4>
+                <h4 class="hide-on-large-only">Hide me on large screen sizes</h4>
+                <h4 class="hide-on-med-and-down">Hide me on medium & small screen sizes</h4>
+                <h4 class="hide-on-med-and-up">Hide me on medium and large screen sizes</h4>
+                <h4 class="show-only-on-small">Only show me on small screens</h4>
+                <h5 class="light-blue darken-1">Be yourself, everyone else is already taken</h5>
+                <h5 class="orange lighten-4">We are all in the gutter, but some of us are looking at the stars</h5>
+                <h5 class="purple darken-3 white-text">To live is the rarest thing in the world. Most people exist, that
+                    is all</h5>
+                <h5 class="teal darken-2 yellow-text text-lighten-3">Experience is simply the name we give our mistakes
+                </h5>
+                <h5 class="yellow lighten-3 purple-text text-darken-2">Always forgive your enemies - nothing annoys them
+                    so much</h5>
+            </div>
+        </aside>
+        <aside>
+            <div class="container">
+                <h5 class="center-align">Center alignment</h5>
+                <h5 class="left-align">Left alignment</h5>
+                <h5 class="right-align">Right alignment</h5>
+            </div>
+
+            <div class="container grey lighten-2 box valign-wrapper">
+                <h5>Vertical alignment</h5>
+            </div>
+
+            <div class="container">
+                <p class="truncate">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec sem dictum,
+                    consectetur ex vitae, feugiat quam. Sed quis sodales urna. Donec tincidunt faucibus diam a
+                    ullamcorper.</p>
+            </div>
+        </aside>
+        <aside>
+            <div class="container">
+                <h4>Buttons</h4>
+                <a href="#" class="btn waves-effect waves-light">Normal button</a>
+                <a href="#" class="btn-small">Small button</a>
+                <a href="#" class="btn-large">Large button</a>
+                <a href="#" class="btn indigo waves-effect waves-light">Indigo button</a>
+                <a href="#" class="btn disabled">Disabled button</a>
+                <h4>Floating button</h4>
+                <a href="#" class="btn-floating pulse pink"></a>
+                <h4>Other elements</h4>
+                <div class="btn">I am a div tag</div>
+            </div>
+        </aside>
+        <aside>
+            <div class="container">
+                <h4>Icons</h4>
+                <i class="material-icons red-text">error</i>
+                <i class="material-icons yellow-text text-darken-2">warning</i>
+                <i class="material-icons grey-text">cloud</i>
+                <i class="material-icons light-blue-text">folder</i>
+                <h4>Icons on Buttons</h4>
+                <a href="#" class="btn indigo">
+                    <span>Send</span>
+                    <i class="material-icons right">send</i>
+                </a>
+                <a href="#" class="btn pink waves-effect waves-light">
+                    <span>Email</span>
+                    <i class="material-icons left">email</i>
+                </a>
+                <h4>Icons on Floating Buttons</h4>
+                <a href="#" class="btn-floating light-blue pulse">
+                    <i class="material-icons">add</i>
+                </a>
+                <a href="#" class="btn-floating red pulse">
+                    <i class="material-icons">remove</i>
+                </a>
+                <a href="#" class="btn-floating orange pulse">
+                    <i class="material-icons">edit</i>
+                </a>
+            </div>
+        </aside>
+        <aside>
+            <div class="row container">
+                <h4>Materialize Grids</h4>
+                <div class="col s3">Content</div>
+                <div class="col s3">Content</div>
+                <div class="col s3">Content</div>
+                <div class="col s3">Content</div>
+            </div>
+            <div class="row container">
+                <div class="col s6 m3">Content</div>
+                <div class="col s6 m3">Content</div>
+                <div class="col s6 m3">Content</div>
+                <div class="col s6 m3">Content</div>
+            </div>
+            <div class="row container">
+                <div class="col s12 m6 l4">Content</div>
+                <div class="col s12 m6 l4">Content</div>
+                <div class="col s12 m6 l4">Content</div>
+                <div class="col s12 m6 l4">Content</div>
+                <div class="col s12 m6 l4">Content</div>
+                <div class="col s12 m6 l4">Content</div>
+            </div>
+            <div class="row container">
+                <div class="col s12 m6 l4 xl2">Content</div>
+                <div class="col s12 m6 l4 xl2">Content</div>
+                <div class="col s12 m6 l4 xl2">Content</div>
+                <div class="col s12 m6 l4 xl2">Content</div>
+                <div class="col s12 m6 l4 xl2">Content</div>
+                <div class="col s12 m6 l4 xl2">Content</div>
+            </div>
+            <div class="row container">
+                <div class="col s12 m8">Content</div>
+                <div class="col s12 m4">Content</div>
+                <div class="col s12 m4">Content</div>
+                <div class="col s12 m8">Content</div>
+            </div>
+        </aside>
+        <aside>
+            <div class="container">
+                <h4>Shadows & Depth</h4>
+                <div class="row">
+                    <div class="col s2">
+                        <div></div>
+                    </div>
+                    <div class="col s2">
+                        <div class="z-depth-1">z-depth-1</div>
+                    </div>
+                    <div class="col s2">
+                        <div class="z-depth-2">z-depth-2</div>
+                    </div>
+                    <div class="col s2">
+                        <div class="z-depth-3">z-depth-3</div>
+                    </div>
+                    <div class="col s2">
+                        <div class="z-depth-4">z-depth-4</div>
+                    </div>
+                    <div class="col s2">
+                        <div class="z-depth-5">z-depth-5</div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <aside>
+            <div class="container">
+                <h2>Cards</h2>
+                <div class="row">
+                    <div class="col s12 l6">
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="/assets/images/curry.jpg" alt="curry">
+                                <a href="" class="halfway-fab btn-floating pink pulse">
+                                    <i class="material-icons">favorite</i>
+                                </a>
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title">Mango & Chickpea Curry</span>
+
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis aliquam orci.
+                                    Orci varius
+                                    natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                            </div>
+                            <div class="card-action">
+                                <a href="">More details</a>
+                                <a href="">View Ingredients</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 l6">
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="/assets/images/pasta.jpg" alt="pasta">
+                                <a href="" class="halfway-fab btn-floating pink pulse">
+                                    <i class="material-icons">favorite</i>
+                                </a>
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title">Rainbow Pasta Salad</span>
+
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis aliquam orci.
+                                    Orci varius
+                                    natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                            </div>
+                            <div class="card-action">
+                                <a href="">More details</a>
+                                <a href="">View Ingredients</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <aside>
+            <div class="container">
+                <h2>Collections</h2>
+                <ul class="collection with-header">
+                    <li class="collection-header">
+                        <h4>Customers</h4>
+                    </li>
+                    <li class="collection-item avatar">
+                        <i class="material-icons circle blue">person</i>
+                        <span class="title">Ryu</span>
+                        <p class="grey-text">black-belt</p>
+                        <a href="" class="secondary-content">
+                            <i class="material-icons light-blue-text">email</i>
+                        </a>
+                    </li>
+                    <li class="collection-item avatar">
+                        <i class="material-icons circle blue">person</i>
+                        <span class="title">Yoshi</span>
+                        <p class="grey-text">orange-belt</p>
+                        <a href="" class="secondary-content">
+                            <i class="material-icons light-blue-text">email</i>
+                        </a>
+                    </li>
+                    <li class="collection-item avatar">
+                        <i class="material-icons circle blue">person</i>
+                        <span class="title">Crystal</span>
+                        <p class="grey-text">brown-belt</p>
+                        <a href="" class="secondary-content">
+                            <i class="material-icons light-blue-text">email</i>
+                        </a>
+                    </li>
+                    <li class="collection-item">Mario</li>
+                    <li class="collection-item">Luigi</li>
+                    <li class="collection-item">Bowser</li>
+                </ul>
+            </div>
+        </aside>
+        <aside>
+            <div class="container">
+                <h2>Modals</h2>
+
+                <a class="btn orange modal-trigger" href="#terms">Terms & Conditions</a>
+
+                <div id="terms" class="modal">
+                    <div class="modal-content">
+                        <h4>Terms & Conditions</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae finibus mi, egestas
+                            dignissim metus.
+                            Fusce tempus elementum metus. Donec eu nibh fringilla, dignissim arcu eu, ultrices ante.
+                            Cras
+                            consectetur risus id mi condimentum aliquam.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#!" class="modal-close btn orange">Agree</a>
+                    </div>
+                </div>
+
+            </div>
+        </aside>
+    </section>
+    <!-- <footer>
+        <div class="container">
+            
+            <p>Shaun Pelling, aka the "Net Ninja": https://github.com/iamshaunjp/materialize-playlist</p>
+        </div>
+    </footer> -->
+    <!-- <script type="text/javascript" src="/assets/scripts/jquery-3.5.1.js"></script> -->
+    <script type="text/javascript" src="/assets/scripts/materialize.js"></script>
+    <script type="text/javascript" src="/assets/scripts/gaffMaterialize.js"></script>
+    <script>
+        /* $(document).ready(function () {
+            $('.sidenav').sidenav();
+        }); */
+
+        /* document.addEventListener('DOMContentLoaded', () => {
+            let elems = document.querySelectorAll('.sidenav');
+            let instances = M.Sidenav.init(elems);
+        }); */
+    </script>
+</body>
+
+</html>

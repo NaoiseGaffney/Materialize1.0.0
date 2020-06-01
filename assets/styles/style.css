@@ -1,0 +1,81 @@
+/* Book Opening for the Main Page to reveal Book Repository after Login and/or Registration */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    background-color: whitesmoke;
+}
+
+.book-opening {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position: relative;
+    width: 33vw;
+    height: 99vh;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 50%;
+    background: url('/assets/images/BookChapter.jpg') no-repeat;
+    background-size: cover;
+    transform-style: preserve-3d;
+    perspective: 500px;
+}
+
+.book-cover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('/assets/images/BookFront.jpg') no-repeat;
+    background-size: cover;
+    transform-origin: 0 50%;
+    transition: all 2s ease;
+}
+
+/* Open Book for Book Repository CRUD */
+.book-opening:hover .book-cover {
+    transform: rotateY(-180deg);
+}
+
+/* Materialize 1.0 Tests */
+.box {
+    height: 200px;
+}
+
+.row > div {
+    padding: 10px;
+    /* background: rgb(221, 221, 221); */
+    border: 1px solid rgb(255, 255, 255);
+    line-height: 60px;
+}
+
+/* .col > div {
+    background: rgb(173, 216, 230);
+    height: 120px;
+} */
+
+nav .badge {
+    position: relative;
+    top: 20px;
+    right: 20px;
+}
+
+/* CSS "Shenanigans" to modify Materialize 1.0 */
+
+/* p:first-of-type::first-letter {
+    color: deepPink;
+    float: left;
+    font-size: 75px;
+    line-height: 60px;
+    padding-top: 4px;
+    padding-right: 8px;
+    padding-left: 3px;
+} */
+
+/* 
+p::first-letter {
+    font-size: 350%;
+} */
