@@ -1,39 +1,149 @@
-<img src="https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png" style="margin: 0;">
+# Materialize 1.0.0 - CSS and JavaScript (no jQuery)
 
-Welcome USER_NAME,
+Materialize 1.0.0 with JS (no jQuery). A walkthrough of features and a demo website. Based on Shaun Pelling's (The Net Ninja) walkthrough on YouTube. Shaun uses jQuery, I've relied on the Materialize 1.0.0 website documentation to only use JavaScript to initialise the functions. No need to load the jQuery framework.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project.
+[Materialize CSS 1.0.0 Website](https://materializecss.com/)
 
-## Gitpod Reminders
+[Shaun Pelling (Net Ninja): Materialize 1.0.0 Walkthrough on YouTube](https://www.youtube.com/playlist?list=PL4cUxeGkcC9gGrbtvASEZSlFEYBnPkmff)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+[Shaun Pelling (Net Ninja): Materialize 1.0.0 on GitHub](https://github.com/iamshaunjp/materialize-playlist)
 
-`python3 -m http.server`
 
-A blue button should appear to click: *Make Public*,
+## .css{} 'style.css' to Modify the Materialize CSS
 
-Another blue button should appear to click: *Open Browser*.
+[.css{} - photo-style.css](https://github.com/NaoiseGaffney/Materialize1.0.0/blob/master/assets/styles/photo-style.css)
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+For some reason the SpyScrolling is "jerky" which is why I've set the `html {
+    scroll-behavior: smooth;
+}` and ` let instanceScrollspy = M.ScrollSpy.init(elemsScrollspy, {
+        throttle: 10
+    });`.
+    
+To modify the colour of the 'DatePicker', the `!important` attributes must be used, or these modifications will be overridden.
 
-A blue button should appear to click: *Make Public*,
+```
+/* Photo Ninja */
 
-Another blue button should appear to click: *Open Browser*.
+* {
+    margin: 0;
+    padding: 0;
+}
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the backend lessons.
+/* Smooth scrolling when using Materialize ScrollSpy, though this applies to all scrolling. ScrollSpy 'throttle' is set to 10 too. */
+html {
+    scroll-behavior: smooth;
+}
 
-## Updates Since The Instructional Video
+header {
+    content: '';
+    background: url("/assets/images/man.jpg");
+    /* --- Broke out the background: elements to test/ensure they worked as planned. Also adds clarity. Added support for different browsers. --- */
+    background-size: cover;
+    background-position: center;
+    min-height: 1000px;
+}
 
-We continually tweak and adjust this template to help give you the best experience. Here are the updates since the original video was made:
+nav>div>a {
+    margin-top: 3px;
+}
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+.sidenav {
+    width: fit-content;
+}
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+.section {
+    padding-top: 4vw;
+    padding-bottom: 4vw;
+}
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+.tabs .indicator {
+    background-color: rgb(26, 35, 126);
+}
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+.tabs .tab a:focus,
+.tabs .tab a:focus.active {
+    background: transparent;
+}
 
---------
+/* Date Display */
+.datepicker-date-display {
+    background-color: rgb(26, 35, 126);
+}
 
-Happy coding!
+.datepicker-day-button:focus {
+    color: white !important;
+    background-color: rgb(26, 35, 126);
+}
+
+.datepicker-done,
+.datepicker-cancel,
+.select-dropdown li>span,
+.is-today {
+    color: rgb(26, 35, 126) !important
+}
+
+td.is-selected,
+.month-prev:active,
+.month-prev:focus,
+.month-next:active,
+.month-next:focus {
+    background-color: rgb(26, 35, 126) !important
+}
+
+td.is-selected.is-today {
+    color: rgb(255, 255, 255) !important
+}
+
+@media screen and (max-width: 670px) {
+    header {
+        min-height: 500px;
+    }
+}
+```
+
+## (Js) 'photoMaterialize.js' to Initialise the Materialize Functions
+
+[(Js) - photoMaterialize.js](https://github.com/NaoiseGaffney/Materialize1.0.0/blob/master/assets/scripts/photoMaterialize.js)
+
+To initialise the Materialize CSS functions these JavaScript statements are used. If using default values, no options, `M.AutoInit()` can be used. `document.addEventListener("DOMContentLoaded", () => {
+    /* M.AutoInit() });`. If options are required, don't use `M.AutoInit()`, use separate statements for each function, for example:
+    
+```
+let elemsDatepicker = document.querySelectorAll(".datepicker");
+    let instanceDatepicker = M.Datepicker.init(elemsDatepicker, {
+        disableWeekends: true,
+        yearRange: 3
+    });
+```
+
+
+```
+document.addEventListener("DOMContentLoaded", () => {
+    /* M.AutoInit() */ /* Can't pass in options with M.AutoInit(), only use default values */
+    
+    let elemsSidenav = document.querySelectorAll(".sidenav");
+    let instancesSidenav = M.Sidenav.init(elemsSidenav); // Remove "options" from (elems, options)
+    let elemsMaterialboxed = document.querySelectorAll(".materialboxed");
+    let instancesMaterialboxed = M.Materialbox.init(elemsMaterialboxed); // Remove "options" from (elems, options)
+    let elemsParallax = document.querySelectorAll(".parallax");
+    let instancesParallax = M.Parallax.init(elemsParallax); // Remove "options" from (elems, options)
+    let elemsTabs = document.querySelectorAll(".tabs");
+    let instanceTabs = M.Tabs.init(elemsTabs);
+    let elemsTooltip = document.querySelectorAll(".tooltipped");
+    let instanceTooltip = M.Tooltip.init(elemsTooltip);
+    let elemsScrollspy = document.querySelectorAll(".scrollspy");
+    let instanceScrollspy = M.ScrollSpy.init(elemsScrollspy, {
+        throttle: 10
+    });
+    let elemsDatepicker = document.querySelectorAll(".datepicker");
+    let instanceDatepicker = M.Datepicker.init(elemsDatepicker, {
+        disableWeekends: true,
+        yearRange: 3
+    });
+    let elemsModal = document.querySelectorAll(".modal");
+    let instancesModal = M.Modal.init(elemsModal, {
+        dismissible: false,
+        inDuration: "200"
+    });
+});
+```
