@@ -8,7 +8,7 @@ Materialize 1.0.0 with JS (no jQuery). A walkthrough of features and a demo webs
 
 [Shaun Pelling (Net Ninja): Materialize 1.0.0 on GitHub](https://github.com/iamshaunjp/materialize-playlist)
 
-## </> 'photo-ninja.html'by Shaun Pelling
+## </> 'photo-ninja.html' by Shaun Pelling
 
 [</> - photo-ninja.html](https://github.com/NaoiseGaffney/Materialize1.0.0/blob/master/assets/templates/photo-ninja.html)
 
