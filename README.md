@@ -13,8 +13,12 @@ Materialize 1.0.0 with JS (no jQuery). A walkthrough of features and a demo webs
 [</> - photo-ninja.html](https://github.com/NaoiseGaffney/Materialize1.0.0/blob/master/assets/templates/photo-ninja.html)
 
 * [i]: Using FontAwesome for the navigation icons. Using Google Font Icons for all other icons.
-* .css{}: load `materialize.css` before my `photo-style.css`. I've downloaded the Materilize CSS 1.0.0, though a CDN can be used instead, `<!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">`.
+* .css{}: load `materialize.css` before my `photo-style.css`. I've downloaded the Materilize CSS 1.0.0, though a CDN can be used instead,
+
+```
+<!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+```
 
 ```
 <head>
@@ -31,8 +35,12 @@ Materialize 1.0.0 with JS (no jQuery). A walkthrough of features and a demo webs
 </head>
 ```
 
-* (Js): load `materialize.js` before my `photoMaterialze.js` (placed all Materialize CSS 1.0.0 JavaScript initialisation functions in this separate file, as opposed to having it in-line HTML). I've downloaded the Materialize JS, though a CDN can be used instead, `<!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>`.
+* (Js): load `materialize.js` before my `photoMaterialze.js` (placed all Materialize CSS 1.0.0 JavaScript initialisation functions in this separate file, as opposed to having it in-line HTML). I've downloaded the Materialize JS, though a CDN can be used instead,
+
+```
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+```
 
 ```
     ...
