@@ -115,7 +115,7 @@ let elemsDatepicker = document.querySelectorAll(".datepicker");
         yearRange: 3
     });
 ```
-
+If not using `M.AutoInit()`, and not defining `options` for a function, remove `options` as a parameter for the function.
 
 ```
 document.addEventListener("DOMContentLoaded", () => {
